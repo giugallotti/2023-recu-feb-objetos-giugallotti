@@ -53,6 +53,10 @@ class Invernadero inherits Terreno {
     override method costoMantenimiento() {
       return dispositivoElectronico.costo()
       }
+      
+     method esCampoAbierto() {
+    	return false
+    }
  }
  
 class DispositivoElectronico inherits Invernadero {
@@ -63,10 +67,6 @@ class DispositivoElectronico inherits Invernadero {
 	method rico() {
 		return true
 	}
-	
-	 method esCampoAbierto() {
-    	return false
-    }
 }
 
 class ReguladorNutricional inherits DispositivoElectronico {
