@@ -3,9 +3,7 @@ import cultivos.*
 class Terreno {
     const cultivos = []
     var property capacidadMaxima
-    var property costoMantenimiento
-    var property tipoDeTerreno
-    
+    var property costoMantenimiento    
     
     method puedePlantar(cultivo) {
     	return true
@@ -37,7 +35,10 @@ class CampoAbierto inherits Terreno {
     override method costoMantenimiento() {
        return 500 * cultivos.size()
     }
-
+    
+    method esCampoAbierto() {
+    	return true
+    }
 }
 
 class Invernadero inherits Terreno {
@@ -61,7 +62,6 @@ class DispositivoElectronico inherits Invernadero {
     
 	method rico() {
 		return true
-		//duda aca, puedo delegar asi? 
 	}
 }
 

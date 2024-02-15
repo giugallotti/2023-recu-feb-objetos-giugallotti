@@ -40,12 +40,8 @@ class ArbolFrutal inherits Cultivos {
 		valorNutricional = (edad * 3) < 4000
 	}	
 	
-	method esCampoAbierto(terreno) {
-		return terreno.tipoDeTerreno() == "CampoAbierto"
-	}
-	
 	override method puedePlantarse(terreno) {
-		return terreno.esCampoAbierto(terreno)
+		return terreno.esCampoAbierto()
 	}
 }
 
