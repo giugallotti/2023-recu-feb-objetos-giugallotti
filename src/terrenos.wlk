@@ -63,6 +63,10 @@ class DispositivoElectronico inherits Invernadero {
 	method rico() {
 		return true
 	}
+	
+	 method esCampoAbierto() {
+    	return false
+    }
 }
 
 class ReguladorNutricional inherits DispositivoElectronico {
